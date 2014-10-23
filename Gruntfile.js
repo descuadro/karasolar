@@ -22,21 +22,9 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
     watch: {
-      sass: {
-        files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer:server']
-      },
       autoprefixer: {
         files: ['<%= yeoman.app %>/css/**/*.css'],
         tasks: ['copy:stageCss', 'autoprefixer:server']
-      },
-      coffee: {
-        files: ['<%= yeoman.app %>/_src/**/*.coffee'],
-        tasks: ['coffee:dist']
-      },
-      coffeeTest: {
-        files: ['test/spec/**/*.coffee'],
-        tasks: ['coffee:test']
       },
       jekyll: {
         files: [
@@ -401,7 +389,6 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         //'sass:server',
-        'coffee:dist',
         'copy:stageCss',
         'jekyll:server'
       ],
@@ -444,8 +431,6 @@ module.exports = function (grunt) {
     'clean:server',
     'jekyll:check',
     //'sass:server',
-    'coffeelint:check',
-    'coffee:dist',
     'jshint:all',
     'csslint:check'
   ]);
