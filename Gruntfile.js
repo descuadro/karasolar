@@ -270,38 +270,31 @@ module.exports = function (grunt) {
       }
     },
     responsive_images: {
-      achuar: { 
+      fullbg: {
         options: {
-          // Task-specific options go here.
-          sizes: [
-            {
-              name : 'lo',
-              width : 600,
-              quality : 80
-            },
-            {
-              name : 'mid',
-              width : 1200,
-              quality : 80
-            },
-            {
-              name : 'hi',
-              width : 1920,
-              quality : 80
-            },
-            {
-              name : 'xhi',
-              width : 2880,
-              quality : 30
-            }
-          ],
-          files: [{
-              expand : true,
-              src : 'fullbg/**.{jpg,gif,png}',
-              cwd : '<%= yeoman.app %>/images/',
-              dest : '/.tmp/images/'
-          }] 
-        }
+          sizes: [{
+            name: "lo",
+            width: 600,
+            quality: 60
+          },{
+            name: "mid",
+            width: 1200,
+            quality: 60
+          },{
+            name: "hi",
+            width: 1920
+          },{
+            name: "xhi",
+            width: 2880,
+            quality: 30
+          }]
+        },
+        files : [{
+          expand: true,
+          src: 'fullbg/**.{jpg,gif,png}',
+          cwd: '<%= yeoman.app %>/images/',
+          dest: '.tmp/images/'
+        }]
       }
     },
     copy: {
