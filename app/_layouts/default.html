@@ -4,24 +4,17 @@
   html5up.net | @n33co
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
 
   {% include head.html %}
 
-<body>
-  
-{% include header.html %}
+	{% include header.html %}
 
+		{{ content }}
 
-        {{ content }}
+	{% include slides.html %}
 
-{% include slides.html %}
+	{% include gallery.html %}
 
-{% include gallery.html %}
+	{% include subscribe.html %}
 
-{% include subscribe.html %}
-
-{% include footer.html %}
-  </body>
-</html>
-     
+	{% include footer.html %}
