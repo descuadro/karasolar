@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% for post in site.categories['slide'] %}
+<section id="two" class="main style2 {{ post.side }} dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>{{ post.title }}</h2>
+					</header>
+					<p>{{ content }}</p>
+				</div>
+				<a href="#three" class="button style2 down anchored">Next</a>
+			</section>
+{% endfor %}

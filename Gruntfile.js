@@ -277,22 +277,22 @@ module.exports = function (grunt) {
             {
               name : 'lo',
               width : 600,
-              quality : 80
+              quality : 100
             },
             {
               name : 'mid',
               width : 1200,
-              quality : 80
+              quality : 100
             },
             {
               name : 'hi',
               width : 1920,
-              quality : 80
+              quality : 100
             },
             {
               name : 'xhi',
               width : 2880,
-              quality : 30
+              quality : 40
             }
           ],
           files: [{
