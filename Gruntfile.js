@@ -298,6 +298,18 @@ module.exports = function (grunt) {
       }
     },
     copy: {
+      respimages: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '.tmp',
+          src: [
+            //Just the images please
+            'images/fullbg/*.*'
+          ],
+          dest: '<%= yeoman.dist %>'
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -308,6 +320,7 @@ module.exports = function (grunt) {
             // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
             'img/**/*',
+            '.tmp/images/**/*.*',
             'fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}'
@@ -441,6 +454,7 @@ module.exports = function (grunt) {
     'clean',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
+    'responsive_images:fullbg',
     'concurrent:dist',
     'useminPrepare',
     'concat',
