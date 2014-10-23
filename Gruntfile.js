@@ -400,13 +400,13 @@ module.exports = function (grunt) {
     },
     concurrent: {
       server: [
-        'sass:server',
+        //'sass:server',
         'coffee:dist',
         'copy:stageCss',
         'jekyll:server'
       ],
       dist: [
-        'sass:dist',
+        //'sass:dist',
         'coffee:dist',
         'copy:dist'
       ]
@@ -443,7 +443,7 @@ module.exports = function (grunt) {
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
-    'sass:server',
+    //'sass:server',
     'coffeelint:check',
     'coffee:dist',
     'jshint:all',
