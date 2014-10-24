@@ -1,8 +1,9 @@
-<!-- Assigning -->
+<!---
+<!-- Assigning 
 {% assign count = '0' %}
 {% assign next = '1' %}
 {% assign slider_count = site.categories['slide'] | size %}
-<!-- Start post capture -->
+<!-- Start post capture 
 {% for post in site.categories['slide'] reversed %}
 {% capture count %}{{ count | plus: '1' }}{% endcapture %}
 {% capture next %}{{ next | plus: '1' }}{% endcapture %}
@@ -23,6 +24,7 @@
 </section>
 
 <style>#number{{ count }} { background: url('/images/css/overlay.png'), url('/images/fullbg/{{ count }}.png');}</style>
-<!-- This is the end -->
+<!-- This is the end -
 {% endfor %}
 {% assign count = nil %}
+-->
